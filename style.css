@@ -1,0 +1,194 @@
+* {
+    background-color: #1F305E;
+    color: #eec0c8;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.main-image {
+    max-width: 80%;
+    width: 200px;
+    border-radius: 100px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-buttons {
+    display: flex;
+    padding: 10px;
+}
+
+.nav-buttons button {
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+    font-size: 15px;
+    position: relative; /* Important for the ::after positioning */
+}
+button {
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+    font-size: 15px;
+    position: relative; /* Important for the ::after positioning */
+}
+.nav-buttons button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #eec0c8; /* Set underline color */
+    transition: width 0.3s ease-in-out; /* Transition effect */
+}
+button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #eec0c8; /* Set underline color */
+    transition: width 0.3s ease-in-out; /* Transition effect */
+}
+
+.nav-buttons button:hover::after {
+    width: 100%; /* Expands the underline on hover */
+}
+ button:hover::after {
+    width: 100%; /* Expands the underline on hover */
+}
+
+button{
+    cursor: pointer;
+}
+
+.main-heading {
+    margin-left: 10px;
+    font-size: 1.8rem;
+}
+
+.main-content {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.2;
+}
+
+.main-content h1 {
+    font-size: 2.9rem
+}
+
+img{
+    width: 80px;
+    background-color: #eec0c8;
+    /* border-radius: 40%; */
+}
+
+.skills-outer{
+display: flex;
+align-items: center;
+justify-content: space-around;
+/* padding: 20px; */
+align-items: center;
+}
+.skills-1{
+display: flex;
+/* padding: 30px; */
+flex-direction: column;
+align-items: center;
+}
+
+.skills-1 div{
+    margin: 20px;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.skills-2{
+    /* padding: 30px; */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.skills-2 div{
+    margin: 20px;
+    align-items: center;
+    font-weight: bolder;
+}
+.skills-outer img{
+    padding: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 100%;
+}
+
+button{
+    font-size: 20px;
+}
+
+p{
+    line-height: 1.8;
+    font-size: 1.2rem;
+   padding-left: 20%;
+   padding-right: 20%;
+
+}
+.skills-both{
+    display: flex;
+}
+.skills-both hr{
+    width: 200px;
+    background-color: #eec0c8;
+    border-radius: 10px;
+    height: 20px;
+    
+}
+
+.hobbies-images {
+padding: 5%;
+padding-left: 10%;
+margin-left: auto;
+margin-right: auto;
+ 
+}
+.hobbies-images img{
+    width: 29%;
+    padding: 2px;
+    border-radius: 5%;
+    /* margin: 60px; */
+    margin-top: 20px;
+    /* margin-left: 15px; */
+    margin-right: 15px;
+    margin-bottom: 20px;
+  
+    /* justify-content: space-between; */
+    /* border-radius: 100%; */
+}
+video{
+    width: 599;
+}
+
+/* .chat-outer{
+    text-align: left;
+    margin-left: 10%;
+}
+.chat-outer p{
+    text-align: left;
+    align-items: left;
+}
+.chat-outer h5{
+    text-align: left;
+} */
+
+
+
