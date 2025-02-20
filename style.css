@@ -1,25 +1,182 @@
-* {
-    background-color: #1F305E;
-    color: #eec0c8;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
+
+* {
+    background-color: black;
+    color: rgb(192, 192, 192);
+    font-family: 'Poppins','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+hr{
+    color: #ecc6cc;
+    background-color: #ecc6cc;
 }
 
 .main-image {
     max-width: 80%;
-    width: 200px;
-    border-radius: 100px;
+    width: 250px;
+    border-radius: 10px;
+    margin-top: 2rem;
 }
+.home-content{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.main-heading {
+    margin-left: 10px;
+    font-size: 1.8rem;
+    
+}
+
+.home-content {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.2;
+}
+
+.home-content h1 {
+    font-size: 3.5rem;
+   
+}
+.openforwork{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
+    margin-left: 40rem;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements horizontally */
+    justify-content: center;
+    text-align: center; /* Ensures text inside is centered */
+    width: 100%; /* Makes sure it spans the whole width */
+}
+
+.learn-content{
+    content: "";
+    display: inline;
+    font-family: 'Oxanium', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+ 
+}
+.learn-content-div{
+display: flex;
+margin: 3rem;
+width: 100%;
+margin-left: 7rem;
+align-items: center;
+justify-content: left;
+
+}
+.learn-content:after{
+    content: "Exploring different technologies";
+    animation: 6s swap infinite ;
+    display: inline;
+}
+@keyframes swap{
+10%{
+content: "Software development";
+}
+20%{
+content: "Problem solving";
+}
+30%{
+content: "Data structures and Algorithms";
+}
+40%{
+content: "Artificial intelligence";
+}
+50%{
+content: "Networking";
+}
+60%{
+    content: "Cloud computing";
+    }
+    70%{
+        content: "Database management";
+        }
+        80%{
+            content: "Competetive programming";
+            }
+            90%{
+                content: "website development";
+                }
+}
+
+.strengths {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+    /* width: 100%; */
+    /* justify-content: flex-start */
+ 
+}
+.strengths-squares {
+    display: flex;
+    /* width: 50rem; */
+    margin-left: 2rem;
+    justify-content: flex-start;
+
+
+    align-items: center; /* Aligns text and squares in a row */
+    justify-self: flex-start;
+    /* text-align: left; */
+    margin-top: 1rem;
+}
+
+
+.hero-content{
+    display: flex;
+    /* margin-left: 2rem; */
+    /* align-items: flex-start; */
+}
+.animation-squares{
+    background-color: #eec0c8;
+    padding: 1rem;
+    width: 0.1rem;
+    margin: 1rem;
+    animation: rotate infinite 3s;
+    transform: rotate(45deg);
+}
+@keyframes rotate{
+from{
+    transform: rotate(-45deg);
+}
+to{
+    transform: rotate(45deg);
+}
+}
+
+
+
+
+
+
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 1.2rem;
 }
 
 .nav-buttons {
     display: flex;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .nav-buttons button {
@@ -29,7 +186,9 @@
     font-weight: bolder;
     font-size: 15px;
     position: relative; /* Important for the ::after positioning */
+    
 }
+
 button {
     margin: 15px;
     cursor: pointer;
@@ -47,6 +206,7 @@ button {
     left: 0;
     background-color: #eec0c8; /* Set underline color */
     transition: width 0.3s ease-in-out; /* Transition effect */
+    
 }
 button::after {
     content: '';
@@ -57,43 +217,121 @@ button::after {
     left: 0;
     background-color: #eec0c8; /* Set underline color */
     transition: width 0.3s ease-in-out; /* Transition effect */
+    
+}
+.nav-buttons button:hover {
+    font-size: 1.2rem;  /* Increase font size on hover */
+    transition: font-size 0.3s ease-in-out; /* Smooth transition */
 }
 
 .nav-buttons button:hover::after {
     width: 100%; /* Expands the underline on hover */
+    left: 0; 
+
 }
  button:hover::after {
     width: 100%; /* Expands the underline on hover */
+    
 }
 
 button{
     cursor: pointer;
 }
 
-.main-heading {
-    margin-left: 10px;
-    font-size: 1.8rem;
-}
-
-.main-content {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    line-height: 0.2;
-}
-
-.main-content h1 {
-    font-size: 2.9rem
-}
 
 img{
     width: 80px;
     background-color: #eec0c8;
     /* border-radius: 40%; */
 }
+.button-border{
+    padding: 2px;
+background: linear-gradient(115deg, #ecc6cc, #ec537c,#b36774);
+width: 10rem;
+}
+.contact-button{
+padding: 0;
+}
+.button-border:hover{
+    background: linear-gradient(250deg, #ecc6cc, #ec537c,#b36774);
+ 
+}
+.last-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    justify-self: left;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+   
+}
 
+.last-contents-div{
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 3px;
+    font-size: 1.6rem;
+    transition: font-size 0.5s ease-in-out; /* Smooth transition */
+}
+.last-contents-div:hover{
+    font-size: 1.9rem;
+
+}
+.last-contents div{
+    margin: 3rem;
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.hidden.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+
+/* Applies fade-in animation to everything inside .last-contents EXCEPT <hr> */
+.last-contents.show > *:not(hr) {
+    animation: fadeIn 3s ease-in-out forwards;
+    opacity: 1;
+}
+
+/* Ensures elements start as invisible */
+.last-contents > *:not(hr) {
+    opacity: 0;
+}
+
+hr{
+    width: 40rem;
+    font-weight: lighter;
+    align-items: left;
+    justify-content: flex-start;
+justify-self: left;
+align-self: left;
+align-items: flex-start;
+}
+
+
+
+
+
+
+
+
+/*skills*/
 .skills-outer{
 display: flex;
 align-items: center;
@@ -131,10 +369,110 @@ align-items: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 100%;
 }
+.progress-bar-container {
+    width: 20rem;
+    /* overflow: hidden; */
+    
+}
+
+.progress-bar {
+    height: 1.7rem;
+    border-radius: 20px;
+    background-color: rgb(253, 247, 247);
+  
+     padding: 0;
+   margin: 0;
+}
+
+.prog-status {
+    height: 1.7rem;
+    border-radius: 20px;
+    background-color: #ecc6cc;
+    width: 0%;
+   padding: 0;
+   margin: 0;
+}
+
+
+marquee{
+    font-size: 2rem;
+    font-family: 'Press Start 2P', cursive;
+}
+.right-contents{
+    text-align: right;
+    margin: 3rem;
+    margin-right: 3rem;
+    width: 50%;
+    justify-content: right;
+    justify-items: right;
+    margin-left: 45%;
+}
+.right-contents div{
+    margin: 2rem;
+}
+
+/* Animations for each stage */
+.stage-1 {
+animation: 3s progressAnimation1;
+width: 20%;
+}
+
+.stage-2 {
+    animation: 3s progressAnimation1;
+    width: 40%;
+}
+
+.stage-3 {
+    animation: 3s progressAnimation1;
+    width: 60%;
+}
+
+.stage-4 {
+    animation: 3s progressAnimation1;
+    width: 80%;
+}
+
+.stage-5 {
+    animation: 3s progressAnimation1;
+    width: 100%;}
+
+/* Keyframes for different progress bar widths */
+@keyframes progressAnimation1 {
+    from { width: 0%; }
+    to { width: 20%; }
+}
+
+@keyframes progressAnimation2 {
+    from { width: 0%; }
+    to { width: 40%; }
+}
+
+@keyframes progressAnimation3 {
+    from { width: 0%; }
+    to { width: 60%; }
+}
+
+@keyframes progressAnimation4 {
+    from { width: 0%; }
+    to { width: 80%; }
+}
+
+@keyframes progressAnimation5 {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+
+
+
+
+
 
 button{
     font-size: 20px;
+    
 }
+
 
 p{
     line-height: 1.8;
@@ -189,6 +527,5 @@ video{
 .chat-outer h5{
     text-align: left;
 } */
-
 
 

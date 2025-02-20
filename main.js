@@ -1,7 +1,12 @@
-function loadContent(page){
-    fetch(page).then(response=>response.text()).then(data=>{
-        document.getElementById('main-content').innerHTML=data;
-    }).catch(error=>console.log('Error while loading content.', error));
+function loadContent(page) {
+  
+
+    fetch(page)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('main-content').innerHTML = data;
+        })
+        .catch(error => console.log('Error while loading content.', error));
 }
 
 
@@ -14,3 +19,19 @@ let images=[
     "assets/20240326213408_IMG_7876.jpg",
     "assets/20240804034500_IMG_0147.jpg"
 ]
+const observer=new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show")
+        }
+        else{
+            entry.target.classList.remove("show");
+        }
+    })
+})
+
+const hiddenelements=document.querySelectorAll('.hidden');
+hiddenelements.forEach((entry)=>{
+    observer.observe(entry)
+}
+)
